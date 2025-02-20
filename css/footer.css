@@ -1,0 +1,10 @@
+footer div{
+    align-items: center;
+    justify-content: center;
+    /* display: flex; */
+    height: 50px;
+    /* 只有改成flex才会居中,默认不行，如果页面没变化，记得检查有没有引入css */
+}
+footer div {
+    display: flex;
+}

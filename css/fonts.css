@@ -1,0 +1,7 @@
+/* 引入霞鹜文楷 */
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css');
+
+/* 全局设置字体 */
+body {
+  font-family: 'LXGW WenKai', serif !important;
+}

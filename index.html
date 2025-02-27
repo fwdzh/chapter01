@@ -20,14 +20,41 @@
         <input class="search_input" type="text" placeholder="搜索商品...">
         <button class="search_button">搜索</button>
         <div class="navbar">
-            
+
             <ul class=" nav-links">
-                <li><a href="#"">商城</a></li>
+                <li><a href="#">商城</a></li>
                 <li><a href="#">首页</a></li>
                 <li><a href="#">我的订单</a></li>
                 <li><a href="#">友情链接</a></li>
                 <li><a href="#">关于</a></li>
-                </ul>
+                <!-- <li><a href="sign-in/index.html" target="_blank">登录/注册</a></li> -->
+                <li class="user">
+                    <a id="user-name" href="sign-in/index.html" target="_blank">Enter</a>
+                    <p>&nbsp;|&nbsp;</p>
+                    <a id="logout-btn" href="sign-in/register.html" target="_blank">Register</a>
+                </li>
+            </ul>
+            <script>
+                window.onload = function () {
+                    let username = localStorage.getItem("username");
+                    let userNameElement = document.getElementById("user-name");
+                    let logoutBtn = document.getElementById("logout-btn");
+
+                    if (username) {
+                        userNameElement.textContent = username; // 显示用户名
+                        userNameElement.href = "#"; // 阻止跳转到登录页面
+                        userNameElement.classList.add("logged-in");
+
+                        logoutBtn.textContent = "Log out";
+                        logoutBtn.href = '#';
+                        logoutBtn.onclick = function () {
+                            localStorage.removeItem("username"); // 清除本地存储的用户名
+                            location.reload(); // 刷新页面
+                        };
+                    }
+                };
+            </script>
+
         </div>
     </header>
 
@@ -35,24 +62,24 @@
         <div class="row">
             <div class="product">
                 <img src="img/item2.jpg.avif" width="220px">
-                <h4>￥2000.00</h4>
+                <h4>￥24.00</h4>
                 <p>华硕天选5 Pro 国家补贴20% 14代俊杰i9 16英寸游戏本 笔记本电脑(i9-14900HX 16G 1T RTX4060 2.5K)灰</p>
             </div>
             <div class="product">
                 <img src="img/item2.jpg.avif" width="220px">
-                <h4>￥2000.00</h4>
+                <h4>￥24.00</h4>
 
                 <p>华硕天选5 Pro 国家补贴20% 14代俊杰i9 16英寸游戏本 笔记本电脑(i9-14900HX 16G 1T RTX4060 2.5K)灰</p>
             </div>
             <div class="product">
                 <img src="img/item2.jpg.avif" width="220px">
-                <h4>￥2000.00</h4>
+                <h4>￥24.00</h4>
 
                 <p>华硕天选5 Pro 国家补贴20% 14代俊杰i9 16英寸游戏本 笔记本电脑(i9-14900HX 16G 1T RTX4060 2.5K)灰</p>
             </div>
             <div class="product">
                 <img src="img/item2.jpg.avif" width="220px">
-                <h4>￥2000.00</h4>
+                <h4>￥24.00</h4>
 
                 <p>华硕天选5 Pro 国家补贴20% 14代俊杰i9 16英寸游戏本 笔记本电脑(i9-14900HX 16G 1T RTX4060 2.5K)灰</p>
             </div>
@@ -60,25 +87,25 @@
         <div class="row">
             <div class="product">
                 <img src="img/item1.jpg" width="220px">
-                <h4>￥2000.00</h4>
+                <h4>￥24.00</h4>
 
                 <p>康师傅 冰红茶 柠檬味茶饮料 整箱量贩装 500ml*15瓶</p>
             </div>
             <div class="product">
                 <img src="img/item1.jpg" width="220px">
-                <h4>￥2000.00</h4>
+                <h4>￥24.00</h4>
 
                 <p>康师傅 冰红茶 柠檬味茶饮料 整箱量贩装 500ml*15瓶</p>
             </div>
             <div class="product">
                 <img src="img/item1.jpg" width="220px">
-                <h4>￥2000.00</h4>
+                <h4>￥24.00</h4>
 
                 <p>康师傅 冰红茶 柠檬味茶饮料 整箱量贩装 500ml*15瓶</p>
             </div>
             <div class="product">
                 <img src="img/item1.jpg" width="220px">
-                <h4>￥2000.00</h4>
+                <h4>￥24.00</h4>
                 <p>康师傅 冰红茶 柠檬味茶饮料 整箱量贩装 500ml*15瓶</p>
             </div>
         </div>

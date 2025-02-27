@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.0.1">
+  <title>登录</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    footer div {
+      align-items: center;
+      justify-content: center;
+      /* display: flex; */
+      height: 50px;
+      /* 只有改成flex才会居中,默认不行，如果页面没变化，记得检查有没有引入css */
+    }
+
+    footer div {
+      display: flex;
+    }
+
+    @import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css');
+
+    /* 全局设置字体 */
+    body {
+      font-family: 'LXGW WenKai', serif !important;
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="signin.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+  <form class="form-signin">
+    <img class="mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <script>
+      document.querySelector(".form-signin").addEventListener("submit", function (event) {
+        event.preventDefault(); // 阻止默认提交
+    
+        let username = document.getElementById("inputEmail").value.trim();
+        let password = document.getElementById("inputPassword").value.trim();
+    
+        if (!username || !password) {
+          alert("请输入账号和密码！");
+          return;
+        }
+    
+        // let username = email.split("@")[0]; // 这里简单地取邮箱前缀作为用户名
+    
+        // 存储到 localStorage
+        localStorage.setItem("username", username);
+    
+        // 跳转回商城首页
+        window.location.href = "../index.html";
+      });
+    </script>
+    
+    
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <footer>
+      <div>
+        <a href="https://ys.mihoyo.com/">原神</a> &copy; 2025-2025 陈俊杰
+      </div>
+      <div style="margin-top: 25px;">
+        Supported by
+      </div>
+      <div>
+        <img src="../img/support1.jpg" width="64px" style="margin-right: 2em;">
+        <div>&nbsp;</div>
+        <img src="../img/junjie.jpg" width="64px" style="margin-right: 2em; ">
+        <div>&nbsp;</div>
+        <img src="../img/tanxf.jpg" width="64px">
+      </div>
+    </footer>
+    <!-- <p class="mt-5 mb-3 text-muted">&copy; 2025</p> -->
+  </form>
+</body>
+
+</html>
